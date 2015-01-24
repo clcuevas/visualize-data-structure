@@ -28,4 +28,23 @@ $(function() {
 	addTeams("Phillies", 130);
 	addTeams("Rangers", 132);
 
+	function insertionSort() {
+		var length, value, i, j;
+
+		length = list(teams.payroll).length;
+		for (i = 0; i < length; i++) {
+			value = list[i];
+
+			for (j = i-1; (j > -1) && (list[j] > value); j--) {
+				list[j + 1] = list[j];
+			}
+			list[j + 1] = value;
+		}
+		return list;
+	}
+
+	$("#insertion .btn").on("click", function() {
+		insertionSort($(".team-display"));
+	});
+
 });
