@@ -56,12 +56,19 @@ $(function() {
 
 		for (i = 0; i < len; i++) {
 			$current = $("li").eq(i);
-
-			while ($current.data("value") < $current.prev().data("value")) {
-				$current.prev().insertAfter($current);
+			
+			function move($current) {
+				while ($current.data("value") < $current.prev().data("value")) {
+					$current.prev().insertAfter($current);
+				}
 			}
+			setTimeout(move, i * 1000, $current);
 		}
 	}
+
+	// var timeout = function() {
+	// 	setTimeout(insertionSort, 1000);
+	// }
 
 	var shuffle = function(m) {
 		var $temp, rand;
@@ -78,9 +85,7 @@ $(function() {
 	};
 
 	teams = new Teams();
-	$("#sort").on("click", function() {
-		setTimeout(insertionSort, 1000);
-	});
+	$("#sort").on("click", insertionSort);
 
 	$("#reset").on("click", function() {
 		shuffle($("#unsorted .team-list .team-payroll").length)
