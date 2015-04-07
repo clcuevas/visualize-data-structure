@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Baseball's 2015 Payroll</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/kickstart.css" media="all" /> <!-- KICKSTART -->
+		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<header>
+			<h1>Insertion Sort Tutorial</h1>
+		</header>
+		<div id="container">
+			<article>
+				<p class="top">If you are majoring in Computer Science or trying to start a career in programming, one of the first algorithms you are introduced to is the Insertion algorithm. This algorithm is considered one of the first few stable sorting algorithms and it is also simple. This builds or sorts your list one item at a time. However, when it comes to larger lists, it becomes less efficient because it has to look and evaluate each element at a time. Finally, it then compares itself with its neighboring element(to the right). This process is repeated depending on the length of your list.</p>
+				<p>This algorithm is best explained or taught using visual examples. For this tutorial, I will present you with a standard workflow of this algorithm as well as a Baseball Example. Why baseball? I say, "Why not?"</p>
+				<p>Below is a standard workflow that I've gathered from <a href="http://programiz.com">Programiz</a></p>
+				<img src="img/insertion_flow.png" />
+				<h2>Explanation</h2>
+				<p>It begins with the second element (number 3) of an array that is compared with the elements that appears before it (number 12). If the second element is smallr than the first element, the second element is inserted in the position of the first element. After this step, the first two elements of an array will be sorted. The same is applied to the rest of the elements in the array.</p>
+				<section>
+					<h2>Our Baseball Example</h2>
+					<p>For our personal example, we will be using Baseball. If you are a die hard baseball fan like myself, you should know that the sport itself is highly motivated by statistics. This sport has an unlimited number of arrays we can use as examples. For here, I will be using Major League Baseball's 2015 Payroll estimations.</p>
+					<p>The sport has 30 teams in its league. Each team at the beginning of a new season has a payroll obligation. For the year 2015, that obligation is listed below. The figures are in <strong>millions</strong>.</p>
+				</section>
+				<ul id="unsorted">
+				</ul>
+				<section>
+					<p>I have listed all 30 teams in a random order. As you can see, each team has its name, logo pic, and most importantly, estimated 2015 payroll.</p>
+					<p>To see the Insertion Sort Algorithm in work click the SORT button!</p>
+					<p><strong>HINT:</strong> Pay attention to where teams are placed in the table and slowly see them sorted. Towards the end, you will start noticing a decline in sorting time. Remember, the bigger the list the slower the sorting time (this is the last algorithm you would want to use on large lists).</p>
+				</section>
+			</article>
+			<button class="btn" id="sort">SORT</button>
+			<button class="btn" id="reset">SHUFFLE</button>
+		</div>
+		<footer>
+			<p>Created by CLAUDIA CUEVAS</p>
+			<p class="move-right">Copyright &copy; 2015</p>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="insertionSort.js"></script>
+	</body>
+</html>
